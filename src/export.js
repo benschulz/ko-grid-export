@@ -57,7 +57,7 @@ define(['module', 'ko-grid', toolbar], function (module, koGrid) {
                         var url = URL.createObjectURL(blob);
                         var anchor = document.createElement('a');
                         anchor.href = url;
-                        anchor.download = name;
+                        anchor['download'] = name;
                         var event = document.createEvent('MouseEvents');
                         event.initEvent('click', true, true);
                         anchor.dispatchEvent(event);
